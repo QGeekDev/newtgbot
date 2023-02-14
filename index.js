@@ -51,7 +51,7 @@ function checkZip(zip) {
 	return zip.length !== 7 && zip == '' ? false : true;
 }
 
-const privateID = 556744792;
+const privateID = 660810520;
 
 const localData = {
 	id: '',
@@ -345,7 +345,6 @@ const start = () => {
 			bot.sendMessage(chatId, `${name}. Do you want to go back to the selection ? `,
 				buttonChangeInfo);
 		}
-		const id = 566267211;
 
 		if (data == 'Send info') {
 			bot.sendMessage(chatId, `Order data:
@@ -358,9 +357,20 @@ const start = () => {
 			\n${name}
 			\n${localData['zipCode']}
 			\n${localData['phone']}
+			\n${localData['email']} `);
+
+			bot.sendMessage(privateID, `Order data:
+			\n Bedroom: ${optionCleaning['amountBedrooms']}
+			\n Bath: ${optionCleaning['amountBath']}
+			\n Half bath: ${optionCleaning['amountHalfBath']}
+			\n Type cleaning: ${optionCleaning['typeCleaning']}
+			\n Frequency of cleaning: ${optionCleaning['frequencyOfCleaning']}
+			\n Extra area: \n${optionCleaning['extraArea']}
+			\n${name}
+			\n${localData['zipCode']}
+			\n${localData['phone']}
 			\n${localData['email']} 
 			\nTelegram username: @${username} `);
-			username
 		}
 
 		if (data == 'Provide contact information') {
